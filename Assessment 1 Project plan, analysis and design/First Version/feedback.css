@@ -1,7 +1,0 @@
-/* Emoji Feedback app */
-.feedback-app {width: 90%;max-width: 500px;margin: 0 auto;}
-.feedback-container {display: flex;flex-wrap: wrap;justify-content: center;align-items: center;}
-.feedback-item {width: 90px;height: 90px;display: flex;justify-content: center;align-items: center;user-select: none;}
-.feedback-radio {display: none;}
-.feedback-radio ~ span {font-size: 3rem;filter: grayscale(100);cursor: pointer;transition: 0.3s;}
-.feedback-radio:checked ~ span {filter: grayscale(0);font-size: 4rem;}
