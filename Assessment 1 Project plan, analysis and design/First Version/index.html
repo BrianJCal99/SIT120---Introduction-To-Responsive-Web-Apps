@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<title>WORKOUT | RESHAPE THAT SHAPE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- External style sheets -->
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="colors.css">
+
+<!-- Fonts and icons -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- LOGO -->
+<link rel="shortcut icon" type="image/x-icon" href="https://img.icons8.com/ios-filled/50/000000/dumbbell.png">
+
+<!-- Feedback -->
+<link rel="stylesheet" href="./feedback.css">
+
+<!-- Chat -->
+<link rel="stylesheet" href="./chat.css">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("./Images/karsten-winegeart-eGSBVVtVCCw-unsplash.jpg");
+  min-height: 100%;
+}
+
+.bar .button {
+  padding: 16px;
+}
+</style>
+
+<body>
+
+<!-- Navbar fixed on top Desktop Screen -->
+<div class="top">
+  <div class="bar white card" id="navbar">
+    <a href="#home" class="bar-item button wide"><img src="https://img.icons8.com/ios-filled/25/000000/dumbbell.png"/><b> WORKOUT</b></a>
+    <!-- Right-sided navbar links -->
+    <div class="right hide-small hide-medium">
+      <a href="#about" class="bar-item button">ABOUT</a>
+      <div class="dropdown-hover">
+        <a href="#what_we_offer_section"><button class="button">WHAT WE OFFER<i class="fa fa-caret-down margin-left"></i></button></a>
+        <div class="dropdown-content card-4 bar-block">
+          <a href="#" class="bar-item button">PERSONALIZE DIET PLANS</a>
+          <a href="#" class="bar-item button">PERSONALIZE WORKOUT PLANS</a>
+        </div>
+      </div>
+      <a href="#contact" class="bar-item button">CONTACT</a>
+      <a href="#gallery" class="bar-item button">GALLERY</a>
+      <a href="#news" class="bar-item button">NEWS</a>
+      <a href="#search" class="bar-item button"><i class="fa fa-search margin-right"></i> SEARCH</a>
+      <a href="#signin" class="bar-item button">SIGN IN</a>
+      <a href="#signup" class="bar-item button black">SIGN UP</a>
+    </div>
+
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="bar-item button right hide-large" onclick="sidebar_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar Mobile Screen -->
+<nav class="sidebar bar-block black card animate-left hide-large" style="display:none" id="sidebar">
+  <a href="javascript:void(0)" onclick="sidebar_close()" class="bar-item button large padding-16">Close <i class="fa fa-close"></i></a>
+  <a href="#search" onclick="sidebar_close()" class="bar-item button"><i class="fa fa-search"></i> SEARCH</a>
+  <a href="#signin" onclick="sidebar_close()" class="bar-item button">SIGN IN/SIGN UP</a>
+  <a href="#about" onclick="sidebar_close()" class="bar-item button">ABOUT</a> 
+  <a href="javascript:void(0)" onclick="sidebar_dropdown()" class="button block left-align">WHAT WE OFFER<i class="fa fa-caret-down margin-left"></i></a>
+  <div id="what_we_offer_drop_down_menu_sidebar" class="bar-block hide padding-large medium">
+    <a href="#" class="bar-item button">PERSONALIZE DIET PLANS</a>
+    <a href="#" class="bar-item button">PERSONALIZE WORKOUT PLANS</a>
+  </div>
+  <a href="#contact" onclick="sidebar_close()" class="bar-item button">CONTACT</a>
+  <a href="#gallery" onclick="sidebar_close()" class="bar-item button">GALLERY</a>
+  <a href="#news" onclick="sidebar_close()" class="bar-item button">NEWS</a>
+</nav>
+
+<!-- Chat Icon and box fixed on bottom right corner both moblie & desktop -->
+<div class="chat-container" id="chat">
+  <div class="chat chat-icon-holder" v-bind:title="message">
+    <i class="fa fa-comments"></i>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg display-container grayscale-min" id="home">
+  <div class="display-bottommiddle text-white center" style="padding:48px">
+    <span class="xxxlarge text-black animate-bottom"><img src="https://img.icons8.com/ios-filled/100/000000/dumbbell.png"><b> WORKOUT</b></span>
+    <br>
+    <span class="large animate-bottom"><b>RESHAPE THAT SHAPE</b></span>
+    <br>
+    <a href="#about" class="button white padding-large large margin-top opacity hover-opacity-off animate-bottom">Get Started</a>
+  </div> 
+  <div class="display-bottomleft text-black large" style="padding:12px 24px">
+    <i class="fa fa-facebook-official hover-opacity"></i>
+    <i class="fa fa-instagram hover-opacity"></i>
+    <i class="fa fa-snapchat hover-opacity"></i>
+    <i class="fa fa-pinterest-p hover-opacity"></i>
+    <i class="fa fa-twitter hover-opacity"></i>
+    <i class="fa fa-linkedin hover-opacity"></i>
+  </div>
+</header>
+
+<!-- About Section -->
+<div class="container" style="padding:128px 16px" id="about">
+  <h3 class="center">ABOUT WORKOUT</h3>
+  <p class="center large">At WORKOUT we offer the best diet and workout plans from professionals all around the world.
+    <br>Personalise your diet or workout plan as you need.
+    <br>Start building your dream body with us.
+    <br><b>IT'S NOW OR NEVER!</b>
+  </p>
+  <div class="row-padding center" style="margin-top:64px">
+    <div class="third">
+      <img class="margin-bottom jumbo center hover-span" src="https://img.icons8.com/ios-filled/100/000000/fat-man.png"/>
+      <img class="margin-bottom jumbo center hover-span" src="https://img.icons8.com/ios-filled/100/000000/men-age-group-4.png"/>
+      <p class="large">FAT TO FIT</p>
+      <p>When it burns, is when you’re just getting started. That’s when you get stronger!</p>
+    </div>
+    <div class="third">
+      <img class="margin-bottom jumbo hover-span" src="https://img.icons8.com/ios-filled/100/000000/flex-biceps.png"/>
+      <p class="large">BUILD MUSCLES</p>
+      <p>The pain you feel today will be the strength you feel tomorrow.</p>
+    </div>
+    <div class="third">
+      <img class="margin-bottom jumbo hover-span" src="https://img.icons8.com/ios-filled/100/000000/running.png"/>
+      <p class="large">BUILD ENDURANCE</p>
+      <p>Strength isn't about how much you can handle before you break. It's about how much you can endure after you've been broken.</p>
+    </div>
+    <!-- <div class="third">
+      <img class="margin-bottom jumbo hover-span" src="https://img.icons8.com/ios-filled/100/000000/frame-rate.png"/>
+      <p class="large">Refresh Rate</p>
+      <p>Refresh rate is another basic factor in the quality of the user’s VR experience. It describes how fast the headset shows images in frames per second or FPS.</p>
+    </div>
+    <div class="third">
+      <img class="margin-bottom jumbo hover-span" src="https://img.icons8.com/material/100/000000/display.png"/>
+      <p class="large">Display</p>
+      <p>VR headsets all share the same function, but they accomplish this in different ways. They all contain some form of display technology, and this will influence the quality of the final image, and consequently, the VR experience for the headset wearer.</p>
+    </div>
+    <div class="third">
+      <img class="margin-bottom jumbo hover-span" src="https://img.icons8.com/ios-glyphs/100/000000/3d-rotate.png"/>
+      <p class="large">Positional Tracking</p>
+      <p>The technology behind positional tracking allows a device to estimate its position relative to the environment around it. It is essential in VR technology as it enables the headset wearer to feel they are moving within the virtual realm.</p>
+    </div> -->
+  </div>
+</div>
+
+<!-- What We Offer -->
+<div id="what_we_offer_section">
+  <h2 class="center">WHAT WE OFFER</h2>
+  <!-- Diet/Workout Plans Section -->
+  <div class="container" style="padding:128px 16px" id="brands">
+    <h3 class="center">WE HELP YOU TO CREATE YOUR OWN PERSONALIZED DIET/WORKOUT PLAN</h3>
+    <div class="row-padding" style="margin-top:64px">
+      <div class="half section">
+        <div class="card" v-bind:title="oculus">
+          <img src="./Images/louis-hansel-restaurant-photographer-MlPD-AzZYMg-unsplash.jpg" alt="Oculus Logo" style="width:100%">
+          <div class="container">
+            <h3>Diet Plans</h3>
+            <p class="opacity">By WORKOUT</p>
+            <p>Best diet for you according to preferences. Personalized 30-day meal plan to lose weight. Don't start strict diets. Take test to create customized meal plan based on preferences. For all body types. List of healthy recipes. Calorie-torching workouts. According to lifestyle.</p>
+            <div class="center">
+              <a href="#"><button class="button black padding-large large margin-top">START NOW</button></a>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="half section" v-bind:title="vive">
+        <div class="card">
+          <img src="./Images/jelmer-assink-gzeTjGu3b_k-unsplash.jpg" alt="Vive Logo" style="width:100%">
+          <div class="container">
+            <h3>Workout Plans</h3>
+            <p class="opacity">By WORKOUT</p>
+            <p>An exercise routine that's based on your fitness goals, your level of fitness, the amount of time you can devote to exercise each week, and the kind of fitness activities you enjoy. Start building today using our algorithm.</p>
+            <div class="center">
+              <a href="#"><button class="button black padding-large large margin-top">START NOW</button></a>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div class="container light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="center">CONTACT</h3>
+  <p class="center large">Lets get in touch. Send us a message:</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw xxlarge margin-right"></i> Melbourne, AUS</p>
+    <p><i class="fa fa-phone fa-fw xxlarge margin-right"></i> Phone: +94 77 015 5873</p>
+    <p><i class="fa fa-envelope fa-fw xxlarge margin-right"> </i> Email: hcaldera@deakin.edu.au</p>
+    <br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="input border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="input border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="input border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="input border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="button black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  </div>
+</div>
+
+<!-- Subscribe To Newsletter -->
+<div class="container light-gray">
+  <div class="container padding black">
+    <h4 class="center">SUBSCRIBE TO OUR NEWSLETTER</h4>
+  </div>
+  <div class="container white">
+    <p>Enter your e-mail below and get notified on the latest diet and workout plans from WORKOUT.</p>
+    <form action="/action_page.php" target="_blank">
+    <p><input class="input border" type="text" placeholder="Enter e-mail" required name="someone@example.com" style="width:100%"></p>
+    <p><button class="button block dark-grey" type="submit"><i class="fa fa-envelope margin-right"></i>SUBSCRIBE</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="center black padding-64">
+  <!-- Emoji Feedback -->
+  <div class="feedback-app">
+    <h2 class="center">Let us know how we did</h1>
+    <div class="feedback-container" id="feedback">
+      <div class="feedback-item" v-bind:title="bad">
+      <label for="0">
+        <input class="feedback-radio" type="radio" name="feedback" id="0" value="0">
+        <span>🙁</span>
+      </label>
+      </div>
+      <div class="feedback-item" v-bind:title="normal">
+      <label for="1">
+        <input class="feedback-radio" type="radio" name="feedback" id="1" value="1">
+        <span>😐</span>
+      </label>
+      </div>
+      <div class="feedback-item" v-bind:title="good">
+      <label for="2">
+        <input class="feedback-radio" type="radio" name="feedback" id="2" value="2">
+        <span>😃</span>
+      </label>
+      </div>
+    </div>
+  </div>
+  <br>
+  <a href="#home" class="button light-grey"><i class="fa fa-arrow-up margin-right"></i>To the top</a>
+  <div class="xlarge section">
+    <i class="fa fa-facebook-official hover-opacity"></i>
+    <i class="fa fa-instagram hover-opacity"></i>
+    <i class="fa fa-snapchat hover-opacity"></i>
+    <i class="fa fa-pinterest-p hover-opacity"></i>
+    <i class="fa fa-twitter hover-opacity"></i>
+    <i class="fa fa-linkedin hover-opacity"></i>
+  </div>
+  <p>Designed by <a href="https://www.linkedin.com/in/brianjcal/" target="_blank">Brian Caldera</a></p>
+</footer>
+
+<!-- jQuery and JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./script.js"></script>
+
+</body>
+</html>
