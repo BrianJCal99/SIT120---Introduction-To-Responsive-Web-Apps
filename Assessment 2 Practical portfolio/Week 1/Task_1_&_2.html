@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+    Week 1 Prac | Task 1,2 & 3.1
+</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="Task_1_&_2.css">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+h1,h2 {
+    color:purple;
+    font-family: Cursive;    
+}
+
+body {
+  background-color: lightblue;
+}
+</style>   
+
+</head>
+<body>
+
+<!-- Inserting headings -->
+<h1><center><b><i>Week 1 Practicals</center></i></b></h1>
+
+<!-- Add a horizontal line -->
+<hr style="background-color: purple;"> 
+
+<!-- Task 1 -->
+<div id="task1">
+    <h2>Task 1 - Create an HTML Page</h2>
+    <h3>Create an HTML page that includes at least five main HTML tags (like image, references, tables, forms, etc</h3>
+
+    <!-- Add a empty space -->
+    <br>
+
+    <!-- Inserting an image -->
+    <center>
+    <img src='170427-637251494437967118-16x9.jpg' style="height:50%;width:50%;">
+    <br>
+
+    <!-- Inserting a link -->
+    <a href='https://cdn.lynda.com/course/170427/170427-637251494437967118-16x9.jpg' target="_blank"> Scource </a>
+    </center>
+
+    <!-- Inserting a form -->
+    <form>
+        Enter your name: <input type="text" required>
+        <br><br>
+        Age: <input type="number" required>
+        <br><br>
+        Gender: 
+        <input type="radio" name="gender" value="Male" required>Male
+        <input type="radio" name="gender" value="Female" required>Female
+        <input type="radio" name="gender" value="Other" required>Other
+        <br><br>
+        Country:
+        <input type="checkbox" name="country" value="Aus">Australia
+        <input type="checkbox" name="country" value="Can">Canada
+        <input type="checkbox" name="country" value="US">USA
+        <br><br>
+        <label for="education">Choose your education qualification level:</label>
+        <select name="education" id="ed_level" required>
+            <option disabled selected value>--- select an option from the dropdown list ---</option>
+            <option value="al">A-Level</option>
+            <option value="hi">Certificate of Higher Education</option>
+            <option value="dip">Diploma of Higher Education & Foudation Degree</option>
+            <option value="bc">Bchelor's Degree</option>
+            <option value="mas">Masters Degree & Postgraduate Certificate</option>
+        </select>
+        <br><br>
+        <input type='submit'></input>
+        <input type='reset'></input>
+    </form>
+</div>
+<hr style="background-color: purple;">
+
+<!-- Task 2 -->
+<div id="task2">
+    <h2>Task 2 - Add CSS to your HTML page</h2>
+    <h3>Add inline, internal and external styling rules to the HTML page you have created in previous task. Give a column layout to the web page.</h3>
+
+    <div class="row">
+        <div class="column" style="background-color:#aaa;">
+            <h3>Web developing languages</h3>
+            <!-- Inserting a unordered list -->
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+        <div class="column" style="background-color:#bbb;">
+            <h3>Popular web browsers</h3>
+            <!-- Iinserting an ordered list -->
+            <ol>
+                <li>Google Chrome</li>
+                <li>Mozilla Firefox</li>
+                <li>Microsoft Edge</li>
+            </ol>
+        </div>
+    </div>
+    <br>
+
+    <!-- Inserting a table -->
+    <table border="1px">
+        <tr>
+            <th>Language Name</th>
+            <th>Stands for</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Hypertext Markup Language</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Cascading Style Sheets</td>
+        </tr>
+    </table>
+    <br>
+</div>
+<hr style="background-color: purple;">
+
+<!-- Task 3 -->
+<!-- Inserting a responsive button that shows date and time using JavaScript -->
+<h2>Task 3 - Adding JavaScript</h2>
+<h3>3.1 - Try adding responsive script elements some where in the page you have created.</h3>
+<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click here to display Date and Time.</button>
+<p id="demo"></p>
+<h3>Was this page helpful?</h3>
+<button onclick="myFunction()">YES</button>
+<button onclick="myFunction()">NO</button>
+<br><br>
+
+<center>
+    <a href="#task1">Task 1</a>
+    <a href="#task2">Task 2</a>
+    <a href="./Task_3.html" target="_blank">Task 3</a>
+    <a href="./Task_4.html" target="_blank">Task 4</a>
+</center>
+
+</body>
+
+<script>
+function myFunction() {
+    alert("Thank You For Your Feedback!");
+}
+</script>
+
+</html>
