@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<title>WORKOUT | DIET PLANS</title>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- External style sheets -->
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="colors.css">
+
+<!-- Google fonts API -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<!-- LOGO -->
+<link rel="shortcut icon" type="image/x-icon" href="https://img.icons8.com/ios-filled/50/000000/dumbbell.png">
+
+<!-- Feedback -->
+<link rel="stylesheet" href="./feedback.css">
+
+<!-- Vue2 development version -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<!-- Font Awesome Kit -->
+<script src="https://kit.fontawesome.com/6ff5f9b9b9.js" crossorigin="anonymous"></script>
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("./Images/louis-hansel-MlPD-AzZYMg-unsplash.jpg");
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
+.bar .button {
+  padding: 16px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Navbar fixed on top Desktop Screen -->
+<div class="top">
+  <div class="bar white card" id="navbar">
+    <a href="./index.html#home" class="bar-item button wide hover-none"><i class="fas fa-dumbbell large margin-right"></i><b>WORKOUT</b></a>
+    <!-- Right-sided navbar links -->
+    <div class="right hide-small hide-medium">
+      <a href="./index.html#about" class="bar-item button hover-green">ABOUT</a>
+      <div class="dropdown-hover">
+        <button class="button hover-green">WHAT WE OFFER<i class="fa fa-caret-down margin-left"></i></button>
+        <div class="dropdown-content card-4 bar-block">
+          <a href="./diet_plans.html" class="bar-item button hover-green">PERSONALIZE DIET PLANS</a>
+          <a href="./workout_plans.html" class="bar-item button hover-green">PERSONALIZE WORKOUT PLANS</a>
+        </div>
+      </div>
+      <a href="./index.html#contact" class="bar-item button hover-green">CONTACT</a>
+      <a href="./search.html" class="bar-item button hover-green"><i class="fa fa-search margin-right"></i> SEARCH</a>
+    </div>
+
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="bar-item button right hide-large" onclick="sidebar_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar Mobile Screen -->
+<nav class="sidebar bar-block black card animate-left hide-large" style="display:none" id="sidebar">
+  <a href="javascript:void(0)" onclick="sidebar_close()" class="bar-item button large padding-16 hover-green">Close <i class="fa fa-close"></i></a>
+  <a href="./search.html" onclick="sidebar_close()" class="bar-item button hover-green"><i class="fa fa-search"></i> SEARCH</a>
+  <a href="./index.html#about" onclick="sidebar_close()" class="bar-item button hover-green">ABOUT</a> 
+  <a href="javascript:void(0)" onclick="sidebar_dropdown()" class="button block left-align hover-green">WHAT WE OFFER<i class="fa fa-caret-down margin-left"></i></a>
+  <div id="what_we_offer_drop_down_menu_sidebar" class="bar-block hide margin-left">
+    <a href="./diet_plans.html" class="bar-item button hover-green">PERSONALIZE DIET PLANS</a>
+    <a href="./workout_plans.html" class="bar-item button hover-green">PERSONALIZE WORKOUT PLANS</a>
+  </div>
+  <a href="./index.html#contact" onclick="sidebar_close()" class="bar-item button hover-green">CONTACT</a>
+  <a href="./index.html#home" onclick="sidebar_close()" class="bar-item button hover-green"><i class="fas fa-dumbbell large margin-right"></i><b>WORKOUT</b></a>
+</nav>
+
+<header class="bgimg display-container grayscale-min" id="home">
+  <div class="display-left text-black" style="padding:48px">
+    <span class="xxxlarge animate-bottom"><strong>CREATE YOUR OWN<br>PERZONALISED DIET PLAN<br>WITH US!</strong></span>
+    <br>
+    <a href="#CustomizeDietPlan" class="button white padding-large large margin-top animate-bottom">Get Started<i class="fa fa-arrow-down margin-left"></i></a>
+  </div> 
+</header>
+
+<!-- Customize Plan Section -->
+<div class="container center light-grey" style="padding:128px 16px"  id="CustomizeDietPlan">
+  <h3>LET US HELP CHOOSE THE BEST DIET PLAN FOR YOU</h3>
+  <p class="large">PLEASE SELECT FROM THE OPTIONS BELOW</p>
+  <form class="row-padding" style="margin-top:64px">
+    <div class="third padding-16">
+      <img class="margin-bottom jumbo" src="https://img.icons8.com/ios-filled/50/000000/healthy-eating.png"/>
+      <p class="large">I'M TRYING TO</p>
+      <input type="radio" id="gain" name="LoseOrGain" value="GAIN" class="radio" required>
+      <label>Lose Weight</label>
+      <input type="radio" id="lose" name="LoseOrGain" value="LOSE" class="radio" required>
+      <label>Gain Weight</label>
+    </div>
+    <div class="third padding-16">
+      <img class="margin-bottom jumbo" src="https://img.icons8.com/ios-filled/50/000000/gender.png"/>
+      <p class="large">SELECT YOUR GENDER</p>
+      <input type="radio" id="male" name="gender" value="MALE" class="radio" required>
+      <label>Male</label>
+      <input type="radio" id="female" name="gender" value="FEMALE" class="radio" required>
+      <label>Female</label>
+    </div>
+    <div class="third padding-16">
+      <img class="margin-bottom jumbo" src="https://img.icons8.com/ios-filled/50/000000/body.png"/>
+      <p class="large">SELECT YOUR BODY TYPE</p>
+      <input type="radio" id="short" name="BodyType" value="SHORT" class="radio" required>
+      <label>Short</label>
+      <input type="radio" id="slim" name="BodyType" value="SLIM" class="radio" required>
+      <label>Slim</label>
+      <input type="radio" id="overweight" name="BodyType" value="OVERWEIGHT" class="radio" required>
+      <label>Overweight</label>
+      <input type="radio" id="skinny" name="BodyType" value="SKINNY" class="radio" required>
+      <label>Skinny</label>
+    </div>
+    <div class="third padding-16">
+      <img class="margin-bottom jumbo" src="https://img.icons8.com/ios-filled/50/000000/tape-measure.png"/>
+      <p class="large">ENTER YOUR HEIGHT</p>
+      <input class="input" type="number" id="height" required>
+      <label>cm</label>
+    </div>
+    <div class="third padding-16">
+      <img class="margin-bottom jumbo" src="https://img.icons8.com/ios-filled/50/000000/weighing.png"/>
+      <p class="large">ENTER YOUR WEIGHT</p>
+      <input class="input" type="number" id="weight" required>
+      <label>kg</label>
+    </div>
+    <div class="third padding-16">
+      <img class="margin-bottom jumbo" src="https://img.icons8.com/ios-filled/50/000000/age.png"/>
+      <p class="large">ENTER YOUR AGE</p>
+      <input class="input" type="number" id="age" required>
+      <label>Years Old</label>
+    </div>
+    <div class="third padding-16">
+      <img class="margin-bottom jumbo" src="https://img.icons8.com/ios-filled/50/000000/caloric-energy--v1.png"/>
+      <p class="large">ENTER YOUR DAILY CALORIE INTAKE</p>
+      <select class="select" name="calories" id="CaloriesPerDay" required>
+        <option disabled selected value> -- select an option -- </option>
+        <option value="1">Below 2000</option>
+        <option value="2">Between 2000 & 2500</option>
+        <option value="3">Over 2500</option>
+      </select>
+    </div>
+    <div class="third padding-16">
+      <img class="margin-bottom jumbo" src="https://img.icons8.com/ios-glyphs/50/000000/sit-ups.png"/>
+      <p class="large">HOW OFTEN DO YOU EXERCISE</p>
+      <select class="select" name="exercise" id="ExercisePerWeek" required>
+        <option disabled selected value> -- select an option -- </option>
+        <option value="none">I don't get enough exercise</option>
+        <option value="1">1-2 dAYS</option>
+        <option value="2">2-3 dAYS</option>
+        <option value="3">4-5 dAYS</option>
+        <option value="4">Every day</option>
+      </select>
+    </div>
+    <div class="third padding-16">
+      <img class="margin-bottom jumbo" src="https://img.icons8.com/ios-filled/50/000000/step-length.png"/>
+      <p class="large">HOW MANY STEPS DO YOU TAKE IN A DAY</p>
+      <select class="select" name="steps" id="StepsPerDay" required>
+          <option disabled selected value> -- select an option -- </option>
+          <option value="1">Below 4,000 steps</option>
+          <option value="2">Between 4000 & 10,000 steps</option>
+          <option value="3">Between 10,000 & 18,000 steps</option>
+          <option value="4">Over 18,000 steps</option>
+      </select>
+    </div>
+    <input type="submit" class="button black padding-large large margin-top hover-green" value="FIND NOW">
+  </form>
+</div>
+
+<!-- Diet Plans Section -->
+<div class="container center grey" style="padding:128px 16px">
+  <h2>OUR TOP-RATED DIET PLANS</h2>
+  <div class="row-padding" style="margin-top:64px" id="diet-plans"> 
+    <template v-for="plan in plans">
+      <diet-plan
+        v-if="plan.id === 1"
+        v-bind:key="plan.id"
+        v-bind:plan="plan"
+      ></diet-plan>
+      <diet-plan
+        v-if="plan.id === 2"
+        v-bind:key="plan.id"
+        v-bind:plan="plan"
+      ></diet-plan>
+      <diet-plan
+        v-if="plan.id === 3"
+        v-bind:key="plan.id"
+        v-bind:plan="plan"
+      ></diet-plan>
+      <transition name="slide-fade">
+        <diet-plan
+          v-show="!show"
+          v-if="plan.id === 4"
+          v-bind:key="plan.id"
+          v-bind:plan="plan"
+        ></diet-plan>
+        <diet-plan
+          v-show="!show"
+          v-if="plan.id === 5"
+          v-bind:key="plan.id"
+          v-bind:plan="plan"
+        ></diet-plan>
+        <diet-plan
+          v-show="!show"
+          v-if="plan.id === 6"
+          v-bind:key="plan.id"
+          v-bind:plan="plan"
+        ></diet-plan>
+      </transition>
+    </template>
+    <button v-show="show" v-on:click="show = !show" class="button black padding-large large margin-top hover-green">VIEW MORE</button>
+    <button v-show="!show" v-on:click="show = !show" class="button black padding-large large margin-top hover-green">VIEW LESS</button>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="center black padding-64">
+  <a href="index.html#home"  class="xxlarge" style="text-decoration:none;"><i class="fas fa-dumbbell margin-right"></i><b>WORKOUT</b></a>
+  <!-- Emoji Feedback -->
+  <div class="feedback-app padding-16" id="emoji-feedback-app">
+    <h2 class="center">Let us know how we did</h2>
+    <div class="feedback-container">
+      <div class="feedback-item" v-bind:title="bad">
+      <label for="0">
+        <input class="feedback-radio" type="radio" name="feedback" id="0" value="0">
+        <span>🙁</span>
+      </label>
+      </div>
+      <div class="feedback-item" v-bind:title="normal">
+      <label for="1">
+        <input class="feedback-radio" type="radio" name="feedback" id="1" value="1">
+        <span>😐</span>
+      </label>
+      </div>
+      <div class="feedback-item" v-bind:title="good">
+      <label for="2">
+        <input class="feedback-radio" type="radio" name="feedback" id="2" value="2">
+        <span>😃</span>
+      </label>
+      </div>
+    </div>
+  </div>
+  <a href="#" class="button light-gray"><i class="fa fa-arrow-up margin-right"></i>To the top</a>
+  <div class="xlarge section">
+    <i class="fa fa-facebook-official hover-opacity"></i>
+    <i class="fa fa-instagram hover-opacity"></i>
+    <i class="fa fa-snapchat hover-opacity"></i>
+    <i class="fa fa-pinterest-p hover-opacity"></i>
+    <i class="fa fa-twitter hover-opacity"></i>
+    <i class="fa fa-linkedin hover-opacity"></i>
+  </div>
+  <p>Designed by <a href="https://www.linkedin.com/in/brianjcal/" target="_blank">Brian Caldera</a></p>
+</footer>
+
+<script src="./script.js"></script>
+<script src="./diet_plans.js"></script>
+
+</body>
+
+</html>
