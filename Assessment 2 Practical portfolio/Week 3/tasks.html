@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Week 3 Practical Tasks</title>
+</head>
+
+<body>
+
+<div>
+    <h1>Example 1</h1>
+    <h2>The length property returns the length of a string.</h2>
+    <p id="lenght"></p>
+    <h2>The slice() method extracts a part of a string and returns the extracted part in a new string</h2>
+    <p id="slice"></p>
+</div>
+<div>
+    <h1>Task 2</h1>
+    <h2>The toString() method returns a number as a string.</h2>
+    <p id="toString"></p>
+    <h2>The join() method joins all array elements into a string.</h2>
+    <p id="join"></p>
+    <h2>Rendering a list using 'for' loop.</h2>
+    <p id="ListOfFruits"></p>
+</div>
+<div>
+    <h1>Task 3</h1>
+    <h2>The getTime() method returns the number of milliseconds since January 1, 1970.</h2>
+    <p id="getTime"></p>
+    <h2>The getFullYear() method returns the year of a date as a four digit number.</h2>
+    <p id="getFullYear"></p>
+</div>
+
+<script type="text/javascript">
+
+// task 1
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("lenght").innerHTML = "The text '" + txt + "' has " + txt.length + " characters."; // returns the lenght of string
+document.getElementById("slice").innerHTML = txt.slice(7, 13) // returns HIJKLM
+
+// task 2
+var x = 123;
+document.getElementById("toString").innerHTML = 
+    "Data type of " + x + " is '" + typeof x + "'" + "<br>" + // returns the data type of x
+    "Data type of " + x.toString() + " is '" + typeof(x.toString()) + "'" + "<br>" + // returns 123 from variable x
+    (123).toString() + "<br>" + // returns 123 from literal 123
+    (100 + 23).toString(); // returns 123 from expression 100 + 23
+
+var fruits = ["Sunday", "Monday", "Tuesday", "Wednessday", "Thursday", "Friday", "Saturday"]; // join elements in an array
+document.getElementById("join").innerHTML = "7 Days of the week: " + fruits.join(" , ");
+
+var fruits, outputText, fLength, i; // list rendering
+fruits = ["Toyota", "Honda", "KIA", "Mazda", "Nissan"];
+fLength = fruits.length;
+outputText = "<h3>List of car brands around the world</h3> <ul>";
+for (i = 0; i < fLength; i++) 
+{
+    outputText += "<li>" + fruits[i] + "</li>";
+}
+outputText += "</ul>";
+document.getElementById("ListOfFruits").innerHTML = outputText;
+
+// task 3
+var d = new Date();
+document.getElementById("getTime").innerHTML = d.getTime();
+
+var y = new Date();
+document.getElementById("getFullYear").innerHTML = d.getFullYear();
+
+</script>
+</body>
+</html>
