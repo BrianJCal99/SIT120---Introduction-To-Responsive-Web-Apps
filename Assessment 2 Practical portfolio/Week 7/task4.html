@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Week 7 Pracs Task 4</title>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css'>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<style>
+</style>
+</head>
+<body>
+<div id="app">
+   <section class="hero is-fullheight is-warning is-bold">
+     <div class="hero-body">
+       <div class="container">
+         <p class="title is-1">{{ title }}</p>
+         <p class="subtitle is-3">{{ subtitle }}</p>
+         <!-- Renders "Hello from the parent!" -->
+        <child-component>
+          <p slot="bottom">Let's move this into the bottom slot</p>
+          <p>Hello from the parent!</p>
+          <p slot="top">Let's move this into the top slot</p>
+        </child-component>
+        <!-- Renders "Hello from the child!" -->
+        <child-component></child-component>
+       </div>
+     </div>
+  </section>
+</div>
+<script type="text/x-template" id="child-component">
+  <div>
+    <!-- Elements injected with the `slot="top"`
+    attribute will end up in here. -->
+    <slot name="top">
+    </slot>
+    <!-- A slot tag without a name is a catch-all,
+    it will contain any content that doesn't have
+    a `slot=""` attribute. -->
+    <slot>
+      <p>Hello from the child!</p>
+    </slot>
+    <!-- Elements injected with the `slot="bottom"`
+    attribute will end up in here. -->
+    <slot name="bottom">
+    </slot>
+  </div>
+</script>
+<script src="./task4.js"></script>
+</body>
+</html>

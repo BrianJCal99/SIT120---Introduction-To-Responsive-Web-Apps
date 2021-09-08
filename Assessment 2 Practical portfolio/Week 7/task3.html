@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Week 7 Pracs Task 3</title>
+<script src="https://unpkg.com/vue@next"></script>
+<style>
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div id="v-model-example">
+    <div class="center">
+        <h2>My Account</h2>
+        <p>First name: {{firstName}}</p>
+        <p>Last name: {{lastName}}</p>
+        <p>Age: {{userAge}}</p>
+        <p>Country: {{userCountry}}</p>
+    </div>
+    <account-info
+    v-model:first-name="firstName"
+    v-model:last-name="lastName"
+    v-model:user-age="userAge"
+    v-model:user-country="userCountry">
+    </account-info>
+</div>
+
+<script src="./task3.js"></script>
+</body>
+</html>

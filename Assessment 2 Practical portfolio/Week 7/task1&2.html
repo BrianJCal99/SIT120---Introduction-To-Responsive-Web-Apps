@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Week 7 Pracs Task 1 & 2</title>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<style>
+    .center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+    
+<div id="app">
+    <div class="center">
+        <global-component 
+        v-bind:title="post.title" 
+        v-bind:author="post.author" 
+        v-bind:likes= "post.likes" 
+        v-bind:comments= "post.comments" 
+        v-on:buy-coffee = "buyCoffee">
+        </global-component>
+    </div>
+    <br><br>
+    <div class="center">
+        <local-component></local-component>
+    </div>
+</div>
+
+<script src="./task1&2.js"></script>
+</body>
+</html>
