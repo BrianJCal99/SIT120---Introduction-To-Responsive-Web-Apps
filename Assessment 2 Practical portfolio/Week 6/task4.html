@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Week 6 Prac Task 3</title>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+<div id="lazy-modifier">
+    <h1>.lazy Modifier</h1>
+    <input v-model.lazy="message">
+    {{message}}
+</div>
+
+<div id="trim-modifier">
+    <h1>.trim Modifier</h1>
+    <input v-model.trim="message">
+    {{message}}
+</div>
+
+<div id="number-modifier">
+    <h1>.number Modifier</h1>
+    <input v-model.number="age" type="number">
+    {{age}}
+</div>
+<script src="./task4.js"></script>
+</body>
+</html>
