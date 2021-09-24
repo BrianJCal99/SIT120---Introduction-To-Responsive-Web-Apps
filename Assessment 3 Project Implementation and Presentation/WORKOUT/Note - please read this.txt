@@ -1,0 +1,5 @@
+I did not have time to go through actual diet/workout plans to gather data. 
+Therefore I did not consider which meal/workout should be used for each plan. 
+Contents in the plans are not exactly accurate when considering real-life factors. 
+I have used only a few meals and workout types in every plan (instead of leaving them empty) just to demonstrate the system's purpose. 
+But the code is working perfectly and data can be altered later. 
